@@ -13,40 +13,6 @@ Musical instrument tuning detection involves analyzing audio signals to determin
 
 ---
 
-## 📂 Repository Structure
-
-instrument-tuning-detection-ml/
-├── data/
-│   ├── raw/                    # Raw audio files (.wav)
-│   ├── processed/              # Preprocessed features / embeddings
-│   └── labels.csv              # Ground-truth labels (in-tune / out-of-tune)
-│
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_feature_extraction.ipynb
-│   ├── 03_model_training.ipynb
-│   └── 04_evaluation.ipynb
-│
-├── models/
-│   ├── vggish_model.h5          # Trained deep learning model
-│   └── checkpoints/             # Intermediate checkpoints
-│
-├── src/
-│   ├── __init__.py
-│   ├── data_loader.py           # Audio loading and preprocessing
-│   ├── feature_extraction.py    # Spectrogram / VGGish embedding extraction
-│   ├── train_model.py           # Model training pipeline
-│   ├── evaluate_model.py        # Evaluation and metrics
-│   └── inference.py             # Inference on new audio samples
-│
-├── utils/
-│   ├── audio_utils.py           # Audio processing helpers
-│   ├── visualization.py         # Plots and evaluation visuals
-│   └── metrics.py               # Accuracy, confusion matrix, etc.
-│
-├── requirements.txt             # Python dependencies
-├── README.md                    # Project documentation
-└── .gitignore
 
 ## 🛠️ Key Features
 
@@ -78,14 +44,21 @@ instrument-tuning-detection-ml/
 
 ## ⚙️ Requirements
 
-Install dependencies:
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+librosa
+soundfile
+tensorflow
+keras
+torch
+torchaudio
+tqdm
+jupyter
+ipykernel
 
-```bash
-pip install -r requirements.txt
-
-Recommended: Python 3.8+
-
-⸻
 
 ⏱ How to Run
 
@@ -103,17 +76,9 @@ python src/features.py --input ./data/*.wav
 
 (Adjust paths as needed)
 
-⸻
 
-🧪 Example Results
 
-Model	Accuracy	Notes
-CNN Spectrogram	86%	Best overall on held-out test set
-MLP on VGGish Embeddings	83%	Requires less compute, still robust
 
-(Replace with your actual final results)
-
-⸻
 
 📈 Visualizations
 
@@ -123,42 +88,9 @@ The notebooks/ folder includes:
 	•	Training and Validation Curves
 	•	Confusion Matrix Visualization
 
-⸻
 
-🏆 What Makes This Project Stand Out
 
-✔ Structured for end-to-end reproducibility
-✔ Demonstrates machine learning design, training, and evaluation
-✔ Uses real audio and deep learning for classification tasks
-✔ Well-organized for professional portfolio presentation
 
-⸻
-
-📌 Ethical & Responsible Use
 
 This project is intended for research, education, and portfolio demonstration. When applying to professional roles, be transparent about the origin (coursework) and your extensions.
 
-“Based on work from CS8321 coursework, extended and refactored for professional use.”
-
-⸻
-
-📫 Contact
-
-If you have questions or want to discuss improvements, feel free to connect!
-
-⸻
-
-
----
-
-## ✨ Tips to *improve* this README before pushing
-
-✅ Add **project screenshots**  
-✅ Add a **diagram of the pipeline (audio → features → model)**  
-✅ Add **final metrics and evaluation plots**  
-✅ Add a **Usage section with commands**  
-✅ Include a **Live demo link** if you deploy it
-
----
-
-If you want, I can generate a **diagram** or a **visual architecture graphic** you can embed in this README too.
