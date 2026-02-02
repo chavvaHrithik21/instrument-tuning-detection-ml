@@ -15,16 +15,38 @@ Musical instrument tuning detection involves analyzing audio signals to determin
 
 ## 📂 Repository Structure
 
-.
-├── data/                        # Dataset and label files
-├── notebooks/                   # Jupyter notebooks used for experimentation
-├── models/                     # Trained model files (HDF5, etc.)
-├── src/                        # Source code for training and evaluation
-├── utils/                      # Helper modules (feature extraction, etc.)
-├── requirements.txt            # Python dependencies
-├── README.md                  # Project documentation
-
----
+instrument-tuning-detection-ml/
+├── data/
+│   ├── raw/                    # Raw audio files (.wav)
+│   ├── processed/              # Preprocessed features / embeddings
+│   └── labels.csv              # Ground-truth labels (in-tune / out-of-tune)
+│
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_feature_extraction.ipynb
+│   ├── 03_model_training.ipynb
+│   └── 04_evaluation.ipynb
+│
+├── models/
+│   ├── vggish_model.h5          # Trained deep learning model
+│   └── checkpoints/             # Intermediate checkpoints
+│
+├── src/
+│   ├── __init__.py
+│   ├── data_loader.py           # Audio loading and preprocessing
+│   ├── feature_extraction.py    # Spectrogram / VGGish embedding extraction
+│   ├── train_model.py           # Model training pipeline
+│   ├── evaluate_model.py        # Evaluation and metrics
+│   └── inference.py             # Inference on new audio samples
+│
+├── utils/
+│   ├── audio_utils.py           # Audio processing helpers
+│   ├── visualization.py         # Plots and evaluation visuals
+│   └── metrics.py               # Accuracy, confusion matrix, etc.
+│
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project documentation
+└── .gitignore
 
 ## 🛠️ Key Features
 
